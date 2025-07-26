@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internship Categories</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Explore Our Internship Categories</h1>
+    <p>Select a field that matches your passion and skills.</p>
+  </header>
+
+  <main class="category-container">
+    <!-- CATEGORY CARDS -->
+    <div class="card fade-in">
+      <i class="fas fa-code"></i>
+      <h3>Web Development</h3>
+      <p>Build responsive and dynamic websites using modern tech.</p>
+      <button>Apply Now</button>
+    </div>
+
+    <div class="card fade-in">
+      <i class="fas fa-paint-brush"></i>
+      <h3>Graphic Design</h3>
+      <p>Create stunning visuals for web and print media.</p>
+      <button>Apply Now</button>
+    </div>
+
+    <div class="card fade-in">
+      <i class="fas fa-database"></i>
+      <h3>Data Science</h3>
+      <p>Analyze data to uncover insights and trends.</p>
+      <button>Apply Now</button>
+    </div>
+
+    <div class="card fade-in">
+      <i class="fas fa-pencil-ruler"></i>
+      <h3>UI/UX Design</h3>
+      <p>Design seamless and intuitive user experiences.</p>
+      <button>Apply Now</button>
+    </div>
+
+    <div class="card fade-in">
+      <i class="fab fa-wordpress"></i>
+      <h3>WordPress Development</h3>
+      <p>Customize themes and plugins for websites.</p>
+      <button>Apply Now</button>
+    </div>
+
+    <div class="card fade-in">
+      <i class="fas fa-bullhorn"></i>
+      <h3>Digital Marketing</h3>
+      <p>Promote brands through digital channels effectively.</p>
+      <button>Apply Now</button>
+    </div>
+
+    <div class="card fade-in">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Mobile App Dev</h3>
+      <p>Develop apps for Android and iOS platforms.</p>
+      <button>Apply Now</button>
+    </div>
+
+    <div class="card fade-in">
+      <i class="fas fa-video"></i>
+      <h3>Video Editing</h3>
+      <p>Edit and produce engaging multimedia content.</p>
+      <button>Apply Now</button>
+    </div>
+  </main>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+</body>
+</html>
+
+
+---
+
+✅ style.css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fc;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: #4A90E2;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  background: #4A90E2;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background: #357ABD;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4A90E2;
+  color: white;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+
+.scroll-top:hover {
+  background: #357ABD;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Fix for small phones */
+@media screen and (max-width: 320px) {
+  .category-container {
+    padding: 1rem;
+  }
+}
+
+
+---
+
+✅ script.js
+
+// Scroll-to-top button
+const scrollBtn = document.getElementById("scrollTopBtn");
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 100) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+};
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Animate cards on scroll
+const cards = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.1 });
+
+cards.forEach(card => observer.observe(card));
+
+
