@@ -1,0 +1,31 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Work | Project Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Our Work</h1>
+    <p>A look at what we’ve created</p>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <div class="card">
+      <img src="https://picsum.photos/300/200?random=1" alt="Project 1">
+      <h3>Project One</h3>
+      <p>Responsive website for a local business.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/300/200?random=2" alt="Project 2">
+      <h3>UI/UX Design</h3>
+      <p>Mobile app interface design for productivity app.</p>
+      <a href="#" class="btn">View
