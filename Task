@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Pricing Plans</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Our Pricing Plans</h1>
+    <p>Choose the right plan for your growth</p>
+    <div class="toggle-container">
+      <span>Monthly</span>
+      <label class="switch">
+        <input type="checkbox" id="priceToggle" />
+        <span class="slider"></span>
+      </label>
+      <span>Yearly</span>
+    </div>
+  </header>
+
+  <section class="pricing">
+    <div class="card">
+      <div class="plan-name">Starter</div>
+      <div class="price" data-monthly="$0/mo" data-yearly="$0/yr">$0/mo</div>
+      <ul class="features">
+        <li>Basic Access</li>
+        <li>1 Project</li>
+        <li>Email Support</li>
+        <li>Community Access</li>
+      </ul>
+      <button class="btn">Choose Plan</button>
+    </div>
+
+    <div class="card popular">
+      <div class="badge">Most Popular</div>
+      <div class="plan-name">Professional</div>
+      <div class="price" data-monthly="$49/mo" data-yearly="$499/yr">$49/mo</div>
+      <ul class="features">
+        <li>All Starter Features</li>
+        <li>5 Projects</li>
+        <li>Priority Support</li>
+        <li>Analytics Dashboard</li>
+        <li>Team Collaboration</li>
+      </ul>
+      <button class="btn">Choose Plan</button>
+    </div>
+
+    <div class="card">
+      <div class="plan-name">Premium</div>
+      <div class="price" data-monthly="$99/mo" data-yearly="$999/yr">$99/mo</div>
+      <ul class="features">
+        <li>All Pro Features</li>
+        <li>Unlimited Projects</li>
+        <li>Dedicated Manager</li>
+        <li>Custom Integrations</li>
+        <li>Priority Phone Support</li>
+      </ul>
+      <button class="btn">Choose Plan</button>
+    </div>
+  </section>
+
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+---
+
+✅ style.css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.toggle-container {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.pricing {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.plan-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.features li {
+  margin: 0.5rem 0;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #388e3c;
+}
+
+.popular {
+  border: 2px solid #4caf50;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ff9800;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 768px) {
+  .pricing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .pricing {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+---
+
+✅ script.js
+
+// Toggle pricing
+const toggle = document.getElementById("priceToggle");
+const prices = document.querySelectorAll(".price");
+
+toggle.addEventListener("change", () => {
+  prices.forEach(price => {
+    price.textContent = toggle.checked
+      ? price.getAttribute("data-yearly")
+      : price.getAttribute("data-monthly");
+  });
+});
+
+// Scroll-to-top button
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = () => {
+  scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
+};
+
+scrollBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+
